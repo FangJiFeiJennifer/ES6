@@ -58,5 +58,26 @@ $ babel src -d lib
   在全局环境下进行Babel转码,意味着，如果项目要运行，全局环境必须有Babel，也就是说项目产生了对环境的依赖。另一方面，这样做也无法支持不同项目使用不同版本的Babel。
 一个解决办法是将babel-cli安装在项目之中。
 
+>
+#### 安装
+$ npm install --save-dev babel-cli
+
+然后，改写package.json。
+>
+```json
+{
+  // ...
+  "devDependencies": {
+    "babel-cli": "^6.0.0"
+  },
+  "scripts": {
+    "build": "babel src -d lib"
+  }
+}
+```
+转码的时候，就执行下面的命令。
+>$ npm run build
+
+
 ====
 
