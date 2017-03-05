@@ -158,5 +158,8 @@ require('babel-polyfill');
 `_**Babel默认不转码的API非常多，详细清单可以查看babel-plugin-transform-runtime模块的
 [definitions.js](https://github.com/babel/babel/blob/master/packages/babel-plugin-transform-runtime/src/definitions.js)文件。**_`
 
+##7、 gulp-babel
+https://www.npmjs.com/package/gulp-babel
+
 ====
 
