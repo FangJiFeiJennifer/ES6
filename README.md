@@ -45,14 +45,17 @@ $ babel example.js -o compiled.js
 #### 整个目录转码
 >_**--out-dir 或 -d 参数指定输出目录**_
 <br/>
-    $ babel src --out-dir lib
+$ babel src --out-dir lib
 <br/>
 _**或者**_
 <br/>
-    $ babel src -d lib
+$ babel src -d lib
 
 #### -s 参数生成source map文件
 >$ babel src -d lib -s
 
+###(2). 在项目目录下使用babel
+    在全局环境下进行Babel转码,意味着，如果项目要运行，全局环境必须有Babel，也就是说项目产生了对环境的依赖。另一方面，这样做也无法支持不同项目使用不同版本的Babel。
+一个解决办法是将babel-cli安装在项目之中。
 ====
 
