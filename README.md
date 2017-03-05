@@ -1,16 +1,14 @@
 #一、 Babel用法
 ##1、 配置文件.babelrc
 ###(1). Babel的配置文件是.babelrc，存放在项目的根目录下。使用Babel的第一步，就是配置这个文件。
->
-{
-  "presets": [
-    "es2015",
-    "stage-3"
-  ],
-  "plugins": []
-}
->
-
+`{
+   "presets": [
+     "es2015",
+     "stage-3"
+   ],
+   "plugins": []
+ }
+`
 ###(2). presets字段设定转码规则，官方提供以下的规则集，可以根据需要安装。
 ####ES2015转码规则
 $ npm install --save-dev babel-preset-es2015
