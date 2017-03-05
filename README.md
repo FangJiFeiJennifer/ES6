@@ -55,8 +55,8 @@ $ babel src -d lib
 >$ babel src -d lib -s
 
 ###(2). 在项目目录下使用babel
-  `在全局环境下进行Babel转码,意味着，如果项目要运行，全局环境必须有Babel，也就是说项目产生了对环境的依赖。另一方面，这样做也无法支持不同项目使用不同版本的Babel。
-一个解决办法是将babel-cli安装在项目之中。`
+在全局环境下进行Babel转码,意味着，如果项目要运行，全局环境必须有Babel，也就是说项目产生了对环境的依赖。另一方面，这样做也无法支持不同项目使用不同版本的Babel。
+一个解决办法是将babel-cli安装在项目之中。
 
 >_安装_
 <br/>
@@ -79,8 +79,8 @@ $ npm install --save-dev babel-cli
 $ npm run build
 
 ##3、 babel-node
-`babel-cli工具自带一个babel-node命令，提供一个支持ES6的REPL环境。它支持Node的REPL环境的所有功能，而且可以直接运行ES6代码。
- 它不用单独安装，而是随babel-cli一起安装。然后，执行babel-node就进入PEPL环境。`
+babel-cli工具自带一个babel-node命令，提供一个支持ES6的REPL环境。它支持Node的REPL环境的所有功能，而且可以直接运行ES6代码。
+它不用单独安装，而是随babel-cli一起安装。然后，执行babel-node就进入PEPL环境。
 >$ babel-node
 <br/>
 > &gt; (x => x * 2)(1)
