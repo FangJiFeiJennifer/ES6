@@ -106,6 +106,7 @@ require("./index.js");
 ##4、 babel-core
 
 如果某些代码需要调用Babel的API进行转码，就要使用babel-core模块
+<br/>
 [http://babeljs.io/docs/usage/options/]
 
 >$ npm install babel-core --save
@@ -113,25 +114,21 @@ require("./index.js");
 >**在项目中调用babel-core**
 ```javascript
 var babel = require('babel-core');
-
 // 字符串转码
 babel.transform('code();', options);
 // => { code, map, ast }
-
 // 文件转码（异步）
 babel.transformFile('filename.js', options, function(err, result) {
   result; // => { code, map, ast }
 });
-
 // 文件转码（同步）
 babel.transformFileSync('filename.js', options);
 // => { code, map, ast }
-
 // Babel AST转码
 babel.transformFromAst(ast, code, options);
 // => { code, map, ast }
 ```
->**babel-core的例子**
+>babel-core的例子
 ```javascript
 var es6Code = 'let x = n => n + 1';
 var es5Code = require('babel-core')
