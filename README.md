@@ -103,7 +103,7 @@ require("./index.js");
 `**需要注意的是，babel-register只会对require命令加载的文件转码，而不会对当前文件转码。
 另外，由于它是实时转码，所以只适合在开发环境使用。**`
 
-##4、 babel-core
+##5、 babel-core
 
 如果某些代码需要调用Babel的API进行转码，就要使用babel-core模块
 <br/>
@@ -138,5 +138,23 @@ var es5Code = require('babel-core')
   }).code;
 // '"use strict";\n\nvar x = function x(n) {\n  return n + 1;\n};'
 ```
+##6、 babel-polyfill
+Babel默认只转换新的JavaScript句法（syntax），而不转换新的API，比如Iterator、Generator、Set、Maps、Proxy、Reflect、Symbol、Promise等全局对象，以及一些定义在全局对象上的方法（比如Object.assign）都不会转码。
+
+举例来说，ES6在Array对象上新增了Array.from方法。Babel就不会转码这个方法。如果想让这个方法运行，必须使用babel-polyfill，为当前环境提供一个垫片。
+
+>**安装**
+$ npm install --save babel-polyfill
+
+>**脚本头部，加入如下一行代码**
+```javascript
+import 'babel-polyfill';
+// or
+require('babel-polyfill');
+```
+
+`_**Babel默认不转码的API非常多，详细清单可以查看babel-plugin-transform-runtime模块的
+[definitions.js](https://github.com/babel/babel/blob/master/packages/babel-plugin-transform-runtime/src/definitions.js)文件。**_`
+
 ====
 
