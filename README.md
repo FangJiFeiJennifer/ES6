@@ -19,36 +19,31 @@
 
 #### ES7不同阶段语法提案的转码规则（共有4个阶段），选装一个
 >$ npm install --save-dev babel-preset-stage-0 
-
+<br/>
 >$ npm install --save-dev babel-preset-stage-1
-
+<br/>
 >$ npm install --save-dev babel-preset-stage-2
-
+<br/>
 >$ npm install --save-dev babel-preset-stage-3
 
 ##2、Babel提供babel-cli工具，用于命令行转码.
 ###(1). 在全局环境中使用babel-cli
 >$ npm install --global babel-cli
 
-
 #### 转码结果输出到标准输出
 >$ babel example.js
-
 
 #### 转码结果写入一个文件
 _**--out-file 或 -o 参数指定输出文件**_
 >$ babel example.js --out-file compiled.js
-
-
+<br/>
 _**或者**_
 >$ babel example.js -o compiled.js
-
 
 #### 整个目录转码
 _**--out-dir 或 -d 参数指定输出目录**_
 >$ babel src --out-dir lib
-
-
+<br/>
 _**或者**_
 >$ babel src -d lib
 
