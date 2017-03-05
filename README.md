@@ -16,12 +16,11 @@ $ npm install --save-dev babel-preset-stage-3
   "plugins": []
 }
 
-#Babel提供babel-cli工具，用于命令行转码。
-#在全局环境中使用babel-cli
+#Babel提供babel-cli工具，用于命令行转码；在全局环境中使用babel-cli。
 $ npm install --global babel-cli
 
 # babel-cli用法
-# 转码结果输出到标准输出
+`# 转码结果输出到标准输出`
 $ babel example.js
 
 # 转码结果写入一个文件
