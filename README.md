@@ -21,6 +21,7 @@ $ npm install --save-dev babel-preset-es2015
 
 #### ES7不同阶段语法提案的转码规则（共有4个阶段），选装一个
 >
+
  $ npm install --save-dev babel-preset-stage-0
  
  $ npm install --save-dev babel-preset-stage-1
@@ -28,6 +29,7 @@ $ npm install --save-dev babel-preset-es2015
  $ npm install --save-dev babel-preset-stage-2
  
  $ npm install --save-dev babel-preset-stage-3
+ 
 >
 
 ##2、Babel提供babel-cli工具，用于命令行转码.
@@ -42,12 +44,12 @@ $ babel example.js
 >
 
 #### 转码结果写入一个文件
-    _**--out-file 或 -o 参数指定输出文件**_
+ _**    --out-file 或 -o 参数指定输出文件**_
 >
 $ babel example.js --out-file compiled.js
 >
 
-    _**或者**_
+_** 或者**_
 
 >
 $ babel example.js -o compiled.js
