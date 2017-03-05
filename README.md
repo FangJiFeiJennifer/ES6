@@ -35,6 +35,7 @@
 
 #### 转码结果写入一个文件
 >_**--out-file 或 -o 参数指定输出文件**_
+<br/>
 >$ babel example.js --out-file compiled.js
 <br/>
 _**或者**_
@@ -43,6 +44,7 @@ _**或者**_
 
 #### 整个目录转码
 >_**--out-dir 或 -d 参数指定输出目录**_
+<br/>
 >$ babel src --out-dir lib
 <br/>
 _**或者**_
