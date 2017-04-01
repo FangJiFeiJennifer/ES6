@@ -1,6 +1,6 @@
-#一、 Babel用法
-##1、 配置文件.babelrc
-###(1). Babel的配置文件是.babelrc，存放在项目的根目录下。使用Babel的第一步，就是配置这个文件。
+# 一、 Babel用法
+## 1、 配置文件.babelrc
+### (1). Babel的配置文件是.babelrc，存放在项目的根目录下。使用Babel的第一步，就是配置这个文件。
 >
 ```json
 {
@@ -12,7 +12,7 @@
  }
 ```
 
-###(2). presets字段设定转码规则，官方提供以下的规则集，可以根据需要安装。
+### (2). presets字段设定转码规则，官方提供以下的规则集，可以根据需要安装。
 #### ES2015转码规则
 >$ npm install --save-dev babel-preset-es2015
 
@@ -26,8 +26,8 @@
 <br/>
 >$ npm install --save-dev babel-preset-stage-3
 
-##2、Babel提供babel-cli工具，用于命令行转码.
-###(1). 在全局环境中使用babel-cli
+## 2、Babel提供babel-cli工具，用于命令行转码.
+### (1). 在全局环境中使用babel-cli
 >$ npm install --global babel-cli
 
 #### 转码结果输出到标准输出
@@ -54,7 +54,7 @@ $ babel src -d lib
 >_-s 参数生成source map文件_
 >$ babel src -d lib -s
 
-###(2). 在项目目录下使用babel
+### (2). 在项目目录下使用babel
 在全局环境下进行Babel转码,意味着，如果项目要运行，全局环境必须有Babel，也就是说项目产生了对环境的依赖。另一方面，这样做也无法支持不同项目使用不同版本的Babel。
 一个解决办法是将babel-cli安装在项目之中。
 
@@ -78,7 +78,7 @@ $ npm install --save-dev babel-cli
 <br/>
 $ npm run build
 
-##3、 babel-node
+## 3、 babel-node
 babel-cli工具自带一个babel-node命令，提供一个支持ES6的REPL环境。它支持Node的REPL环境的所有功能，而且可以直接运行ES6代码。
 它不用单独安装，而是随babel-cli一起安装。然后，执行babel-node就进入PEPL环境。
 >$ babel-node
@@ -91,7 +91,7 @@ babel-cli工具自带一个babel-node命令，提供一个支持ES6的REPL环境
 <br/>
 $ babel-node es6.js
 
-##4、 babel-register
+## 4、 babel-register
 babel-register模块改写require命令，为它加上一个钩子。此后，每当使用require加载.js、.jsx、.es和.es6后缀名的文件，就会先用Babel进行转码。
 >$ npm install --save-dev babel-register
 
@@ -103,7 +103,7 @@ require("./index.js");
 `**需要注意的是，babel-register只会对require命令加载的文件转码，而不会对当前文件转码。
 另外，由于它是实时转码，所以只适合在开发环境使用。**`
 
-##5、 babel-core
+## 5、 babel-core
 
 如果某些代码需要调用Babel的API进行转码，就要使用babel-core模块
 <br/>
@@ -140,7 +140,7 @@ var es5Code = require('babel-core')
 // '"use strict";\n\nvar x = function x(n) {\n  return n + 1;\n};'
 ```
 
-##6、 babel-polyfill
+## 6、 babel-polyfill
 Babel默认只转换新的JavaScript句法（syntax），而不转换新的API，比如Iterator、Generator、Set、Maps、Proxy、Reflect、Symbol、Promise等全局对象，以及一些定义在全局对象上的方法（比如Object.assign）都不会转码。
 
 举例来说，ES6在Array对象上新增了Array.from方法。Babel就不会转码这个方法。如果想让这个方法运行，必须使用babel-polyfill，为当前环境提供一个垫片。
@@ -159,7 +159,7 @@ require('babel-polyfill');
 `_**Babel默认不转码的API非常多，详细清单可以查看babel-plugin-transform-runtime模块的
 [definitions.js](https://github.com/babel/babel/blob/master/packages/babel-plugin-transform-runtime/src/definitions.js)文件。**_`
 
-##7、 gulp-babel
+## 7、 gulp-babel
 https://www.npmjs.com/package/gulp-babel
 
 ====
