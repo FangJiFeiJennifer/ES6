@@ -85,8 +85,8 @@ babel-register模块改写require命令，为它加上一个钩子。此后，�
 require("babel-register");  
 require("./index.js");
 
-` ** 需要注意的是，babel-register只会对require命令加载的文件转码，而不会对当前文件转码。
-另外，由于它是实时转码，所以只适合在开发环境使用。 ** `
+**`需要注意的是，babel-register只会对require命令加载的文件转码，而不会对当前文件转码。
+另外，由于它是实时转码，所以只适合在开发环境使用。`** 
 
 ## 5、 babel-core
 
@@ -138,8 +138,8 @@ import 'babel-polyfill';
 require('babel-polyfill');
 ```
 
-`_** Babel默认不转码的API非常多，详细清单可以查看babel-plugin-transform-runtime模块的
-[definitions.js](https://github.com/babel/babel/blob/master/packages/babel-plugin-transform-runtime/src/definitions.js)文件。 **_`
+**`Babel默认不转码的API非常多，详细清单可以查看babel-plugin-transform-runtime模块的
+[definitions.js](https://github.com/babel/babel/blob/master/packages/babel-plugin-transform-runtime/src/definitions.js)文件。`**
 
 ## 7、 gulp-babel
 https://www.npmjs.com/package/gulp-babel
