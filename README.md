@@ -81,12 +81,12 @@ $ babel-node es6.js
 babel-register模块改写require命令，为它加上一个钩子。此后，每当使用require加载.js、.jsx、.es和.es6后缀名的文件，就会先用Babel进行转码。
 >$ npm install --save-dev babel-register
 
->_使用时，必须首先加载babel-register_
+#### _使用时，必须首先加载babel-register_
 require("babel-register");  
 require("./index.js");
 
-`**需要注意的是，babel-register只会对require命令加载的文件转码，而不会对当前文件转码。
-另外，由于它是实时转码，所以只适合在开发环境使用。**`
+` ** 需要注意的是，babel-register只会对require命令加载的文件转码，而不会对当前文件转码。
+另外，由于它是实时转码，所以只适合在开发环境使用。 ** `
 
 ## 5、 babel-core
 
