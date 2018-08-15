@@ -1,4 +1,4 @@
-###注 意
+### 注 意
 
 >
 一般来说，调用<b>resolve</b>或<b>reject</b>以后，Promise 的使命就完成了，后继操作应该放到<b>then</b>方法里面，而不应该直接写在<b>resolve</b>或<b>reject</b>的后面。
@@ -21,7 +21,7 @@ function loadImageAsync(url) {
 }
 ```
 
-###Promise.prototype.then()
+### Promise.prototype.then()
 
 >
 采用链式的then，可以指定一组按照次序调用的回调函数。<b>这时，前一个回调函数，有可能返回的还是一个Promise对象（即有异步操作），这时后一个回调函数，就会等待该Promise对象的状态发生变化，才会被调用。
@@ -41,7 +41,7 @@ getJSON("/post/1.json").then(function(post) {
 如果变为resolved，就调用funcA，如果状态变为rejected，就调用funcB。
 >
 
-###Promise.prototype.catch()
+### Promise.prototype.catch()
 
 ```javascript
 getJSON('/posts.json').then(function(posts) {
@@ -80,7 +80,7 @@ getJSON('/post/1.json').then(function(post) {
 这就是说，Promise 内部的错误不会影响到 Promise 外部的代码，通俗的说法就是“Promise 会吃掉错误”。
 >
 
-###Promise.prototype.finally() 
+### Promise.prototype.finally() 
 
 finally方法用于指定不管 Promise 对象最后状态如何，都会执行的操作。该方法是 ES2018 引入标准的。
 ```javascript
@@ -94,7 +94,7 @@ promise
 >
 finally方法的回调函数不接受任何参数，这意味着没有办法知道，前面的 Promise 状态到底是fulfilled还是rejected。这表明，finally方法里面的操作，应该是与状态无关的，不依赖于 Promise 的执行结果。
 
-###Promise.all()
+### Promise.all()
 
 Promise.all方法用于将多个 Promise 实例，包装成一个新的 Promise 实例。
 
@@ -113,7 +113,7 @@ p的状态由p1、p2、p3决定，分成两种情况。
 （2）只要p1、p2、p3之中有一个被rejected，p的状态就变成rejected，此时第一个被reject的实例的返回值，会传递给p的回调函数。
 >
 
-####注意
+#### 注 意
 
 如果作为参数的 Promise 实例，自己定义了catch方法，那么它一旦被rejected，并不会触发Promise.all()的catch方法。
 ```javascript
@@ -141,7 +141,7 @@ Promise.all([p1, p2])
 如果p2没有自己的catch方法，就会调用Promise.all()的catch方法。
 >
 
-###Promise.race()
+### Promise.race()
 
 Promise.race方法同样是将多个 Promise 实例，包装成一个新的 Promise 实例。
 
