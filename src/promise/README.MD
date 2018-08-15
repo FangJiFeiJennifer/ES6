@@ -141,3 +141,9 @@ const p = Promise.race([p1, p2, p3]);
 
 >上面代码中，只要p1、p2、p3之中有一个实例率先改变状态，p的状态就跟着改变。那个率先改变的 Promise 实例的返回值，就传递给p的回调函数。
 >
+
+### ES6 Promise VS bluebird
+
+其实在实际开发中更加建议使用bluebird，首先bluebird的API远远的比Promise丰富，其次，bluebird的性能比Promise也要好。
+
+[这篇文章](https://pub.clevertech.biz/native-javascript-promises-vs-bluebird-9e58611be22 "Native Javascript Promises vs Bluebird")很好的对比了Promise和Bluebird
