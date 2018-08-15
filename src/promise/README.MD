@@ -36,8 +36,7 @@ getJSON("/post/1.json").then(function(post) {
     console.log("rejected: ", err);
 });
 ```
->
-上面代码中，第一个then方法指定的回调函数，返回的是另一个Promise对象。这时，第二个then方法指定的回调函数，就会等待这个新的Promise对象状态发生变化。
+>上面代码中，第一个then方法指定的回调函数，返回的是另一个Promise对象。这时，第二个then方法指定的回调函数，就会等待这个新的Promise对象状态发生变化。
 如果变为resolved，就调用funcA，如果状态变为rejected，就调用funcB。
 >
 
